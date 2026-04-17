@@ -100,3 +100,17 @@ Fri Apr 17 06:48:47 PM UTC 2026:
 Fri Apr 17 06:50:38 PM UTC 2026: 
  tests:  0|0
 3324e69
+Fri Apr 17 06:52:45 PM UTC 2026: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:101:18: error: conversion lacks type at end of format [-Werror=format=]
+  101 |         printf("%l", pos);
+      |                  ^
+hashmap.c:101:16: error: too many arguments for format [-Werror=format-extra-args]
+  101 |         printf("%l", pos);
+      |                ^~~~
+cc1: all warnings being treated as errors
+6778d0f
