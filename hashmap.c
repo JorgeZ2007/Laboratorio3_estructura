@@ -90,11 +90,19 @@ void insertMap(HashMap * map, char * key, void * value) {
 Pair * searchMap(HashMap * map,  char * key) {   
     long pos = hash(key, map->capacity);
 
-    if(is_equal(key, map->buckets[pos]) == 1) return map->buckets[pos]; 
+    if(is_equal(key, map->buckets[pos]) == 1)
+    {
+        return map->buckets[pos];
+        map->current
+    }
 
     while(map->buckets[pos] != NULL){
         pos++;
-        if(is_equal(key, map->buckets[pos]) == 1) return map->buckets[pos];
+        if(is_equal(key, map->buckets[pos]) == 1)
+            {
+                return map->buckets[pos];
+                map->current
+            }
     }
 
     return NULL;
