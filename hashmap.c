@@ -91,6 +91,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if(map == NULL || key == NULL)  return NULL; 
     
     long pos = hash(key, map->capacity);
+    long auxiliar = pos; 
     while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
         
         if(is_equal(key, map->buckets[pos]->key) == 1)
@@ -99,6 +100,7 @@ Pair * searchMap(HashMap * map,  char * key) {
                 return map->buckets[pos];
             }
         pos = (pos + 1) % map->capacity; 
+        if(pos == auxiliar) break; 
     }
     
     map->current = pos;
