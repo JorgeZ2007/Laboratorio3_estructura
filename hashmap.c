@@ -96,7 +96,7 @@ Pair * searchMap(HashMap * map,  char * key) {
         return map->buckets[pos];
     }
 
-    while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
+    while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL && pos < map->capacity){
         pos++;
         if(is_equal(key, map->buckets[pos]->key) == 0)
             {
