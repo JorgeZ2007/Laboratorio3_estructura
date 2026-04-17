@@ -48,3 +48,17 @@ hashmap.c:104:29: error: expected ‘;’ before ‘}’ token
       |             ~                
 cc1: all warnings being treated as errors
 6158a6c
+Fri Apr 17 06:40:55 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:96:12: error: statement with no effect [-Werror=unused-value]
+   96 |         map->current;
+      |         ~~~^~~~~~~~~
+hashmap.c:104:20: error: statement with no effect [-Werror=unused-value]
+  104 |                 map->current;
+      |                 ~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+c08ac22
