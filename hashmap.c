@@ -93,7 +93,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if(is_equal(key, map->buckets[pos]) == 1)
     {
         return map->buckets[pos];
-        map->current;
+        map->current = pos;
     }
 
     while(map->buckets[pos] != NULL){
@@ -101,7 +101,7 @@ Pair * searchMap(HashMap * map,  char * key) {
         if(is_equal(key, map->buckets[pos]) == 1)
             {
                 return map->buckets[pos];
-                map->current;
+                map->current = pos;
             }
     }
 
