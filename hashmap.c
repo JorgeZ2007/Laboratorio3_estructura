@@ -92,16 +92,16 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     if(is_equal(key, map->buckets[pos]) == 1)
     {
-        return map->buckets[pos];
         map->current = pos;
+        return map->buckets[pos];
     }
 
     while(map->buckets[pos] != NULL){
         pos++;
         if(is_equal(key, map->buckets[pos]) == 1)
             {
-                return map->buckets[pos];
                 map->current = pos;
+                return map->buckets[pos];
             }
     }
 
