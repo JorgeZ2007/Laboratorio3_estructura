@@ -206,7 +206,7 @@ void enlarge(HashMap * map) {
     for(long i = 0; i < viejaCapacidad; i++){
         if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
         {
-            nuevo[i] = insertMap(map, auxiliar->buckets[i]->key, auxiliar->buckets[i]->value);
+            map->buckets[i] = insertMap(map, auxiliar->buckets[i]->key, auxiliar->buckets[i]->value);
         }
     }
 
