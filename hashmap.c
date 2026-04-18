@@ -196,6 +196,19 @@ Pair * nextMap(HashMap * map) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
+    Pair **auxiliar = map->buckets;
+    long viejaCapacidad = map->capacity;  
+
+    map->capacity *= 2;
+    map->buckets = (Pair **) calloc(map->capacity, sizeof(Pair *)); 
+    map->size = 0;  
+
+    for(long i = 0; i < viejaCapacidad; i++){
+        if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
+        {
+            nuevo[i] = insertMap(map, auxiliar->buckets[i]->key, auxiliar->buckets[i]->value);
+        }
+    }
 
 }
 
