@@ -137,11 +137,17 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 void eraseMap(HashMap * map,  char * key) {    
     long pos = hash(key, map->capacity);
+    long auxiliar = pos; 
 
-    if(is_equal(key, map->buckets[pos]->key) == 1)
-    {
-        map->buckets[pos]->key = NULL;
-        map->size--;
+    while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
+
+        if(is_equal(key, map->buckets[pos]->key) == 1)
+            {
+                map->buckets[pos]->key = NULL;
+                map->size--;
+            }
+        pos = (pos + 1) % map->capacity; 
+        if(pos == auxiliar) break; 
     }
 
 
