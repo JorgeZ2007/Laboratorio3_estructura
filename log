@@ -259,3 +259,18 @@ hashmap.c:209:81: error: ‘auxiliar’ is a pointer to pointer; did you mean to
       |                                                                                 ^~
       |                                                                         (*      )
 bceec4a
+Sat Apr 18 02:20:39 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:209:36: error: ‘auxiliar’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+  209 |             insertMap(map, auxiliar->buckets[i]->key, auxiliar->buckets[i]->value);
+      |                                    ^~
+      |                            (*      )
+hashmap.c:209:63: error: ‘auxiliar’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+  209 |             insertMap(map, auxiliar->buckets[i]->key, auxiliar->buckets[i]->value);
+      |                                                               ^~
+      |                                                       (*      )
+dfc7b57
