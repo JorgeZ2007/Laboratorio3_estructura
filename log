@@ -274,3 +274,9 @@ hashmap.c:209:63: error: ‘auxiliar’ is a pointer to pointer; did you mean to
       |                                                               ^~
       |                                                       (*      )
 dfc7b57
+Sat Apr 18 02:21:25 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|1
+total_score: 50/60
+3ca0d2f
